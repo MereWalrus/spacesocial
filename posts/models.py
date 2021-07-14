@@ -17,7 +17,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     message = models.TextField()
     message_html = models.TextField(editable=False)
-    group = models.ForeignKey(Group,related_name='posts',nulll=True.blank=True)
+    group = models.ForeignKey(Group,related_name='posts',nulll=True,blank=True)
 
     def __str__(self):
         return self.message
