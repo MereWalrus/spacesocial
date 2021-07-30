@@ -11,7 +11,7 @@ from groups.models import Group,GroupMember
 # Create your views here.
 
 class CreateGroup(generic.CreateView,LoginRequiredMixin):
-    fields = ('name','desccription')
+    fields = ('name','description')
     model = Group
 
 class SingleGroup(generic.DetailView):
